@@ -1,4 +1,3 @@
-
 export default () => ({
   port: parseInt(process.env['APP_PORT'] || '', 10) || 3000,
   description: process.env['API_DESCRIPTION'],
@@ -8,7 +7,6 @@ export default () => ({
     name: process.env['DB_NAME'],
     password: process.env['DB_PASSWORD'],
     user: process.env['DB_USER'],
-    uri: process.env['DB_URI']
-
-  }
+    uri: process.env['DB_URI'],
+  },
 });

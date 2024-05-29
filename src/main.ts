@@ -10,12 +10,13 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('Tinter API')
-    .setDescription(configService.get<string>('description') || 'Api description')
+    .setDescription(
+      configService.get<string>('description') || 'Api description',
+    )
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
-
 
   await app.listen(3000);
 }
